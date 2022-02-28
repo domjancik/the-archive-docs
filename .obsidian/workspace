@@ -1,0 +1,110 @@
+{
+  "main": {
+    "id": "752f4333370efab4",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cbacb69d391abdd",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "selection-on-curved-image.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "087e1cbb2f0891a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "46e15c7c6ec014d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53c562476b02a56e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b317d1d4c1e63ec6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8f24643b8947a2da",
+    "type": "split",
+    "children": [
+      {
+        "id": "f26c248eac3d6efa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3226aef264ac403",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "selection-on-curved-image.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e78bf2c2bf6f6412",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2cbacb69d391abdd",
+  "lastOpenFiles": [
+    "selection-on-curved-image.md",
+    "Hello, World! - Google Chrome 2022-02-28 19-55-31.mp4",
+    "Generating Waveforms.md",
+    "Next Up.md",
+    "Screenshots.md",
+    "Live editing comparison.md",
+    "HTTPS on local network.md",
+    "a-frame-super-hot-loader-ngrok.md",
+    "a-frame-super-hot-loader.md"
+  ]
+}

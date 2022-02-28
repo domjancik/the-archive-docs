@@ -1,0 +1,3 @@
+- Raycaster control for waveform position
+- Slider for playback speed
+- Exploring waves
