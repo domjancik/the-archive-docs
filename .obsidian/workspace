@@ -7,11 +7,9 @@
         "id": "2cbacb69d391abdd",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "README.md",
-            "mode": "source",
-            "source": false
+            "file": "Media/Pasted image 20220226175822.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Media/Pasted image 20220226175822.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +95,15 @@
   },
   "active": "2cbacb69d391abdd",
   "lastOpenFiles": [
-    "README.md",
-    "selection-on-curved-image.md",
-    "Hello, World! - Google Chrome 2022-02-28 19-55-31.mp4",
-    "Generating Waveforms.md",
-    "Next Up.md",
+    "Media/Pasted image 20220226175822.png",
+    "Media/Hello, World! - Google Chrome 2022-02-28 19-55-31.mp4",
+    "a-frame-super-hot-loader.md",
+    "Media/2022-02-27-21-39-39.png",
     "Screenshots.md",
+    "a-frame-threejs-texture-manipulation.md",
+    "Next Up.md",
     "Live editing comparison.md",
     "HTTPS on local network.md",
-    "a-frame-super-hot-loader-ngrok.md",
-    "a-frame-super-hot-loader.md"
+    "selection-on-curved-image.md"
   ]
 }
