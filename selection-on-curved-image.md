@@ -1,6 +1,6 @@
 # Selecting a point on a-curvedimage
 
-![](2022-02-27-22-16-26.png)
+![](Media/2022-02-27-22-16-26.png)
 
 The THREE.JS Raycaster is able to provide exact point of intersection. Have to figure out how to reach that from A-Frame `laser-controls` but in principle this should allow us to:
 
@@ -43,7 +43,7 @@ AFRAME.registerComponent('raycaster-listen', {
 
 Ok, attaching this component to the curvedimage seems to work just fine with the mouse cursor. (Image is missing due to disconnected external drive)
 
-![](2022-02-27-22-31-27.png)
+![](Media/2022-02-27-22-31-27.png)
 
 So this covers also #2
 
@@ -53,7 +53,7 @@ https://stackoverflow.com/questions/37667438/convert-three-js-scene-rotation-to-
 
 https://en.wikipedia.org/wiki/Polar_coordinate_system
 
-![](2022-02-27-22-34-54.png)
+![](Media/2022-02-27-22-34-54.png)
 
 We don't really care about the radius so to calculate the angle we can do simply:
 
@@ -70,10 +70,10 @@ const alpha = Math.atan2(z, x);
 
 Seems to be working out well. Results are in radians and go to negative, see the graph of atan2 function:
 
-![](2022-02-27-22-42-45.png)
-![](2022-02-27-22-45-23.png)
+![](Media/2022-02-27-22-42-45.png)
+![](Media/2022-02-27-22-45-23.png)
 
-![](2022-02-27-22-42-31.png)
+![](Media/2022-02-27-22-42-31.png)
 
 While this is very cool and all this advanced high school math makes us feel very smart, there may actually be a simpler way.
 
@@ -81,7 +81,7 @@ While this is very cool and all this advanced high school math makes us feel ver
 
 You see, the Intersection object returned from the raycaster also includes the UV coordinates.
 
-![](2022-02-28-19-00-18.png)
+![](Media/2022-02-28-19-00-18.png)
 <figcaption>
 Yup, there it is.
 </figcaption>
@@ -95,16 +95,16 @@ And if we end up implementing zooming by scaling the texture, the selection will
 Let's see if it works. For better visibility, I'll also record a little sample and generate a waveform since I'm too comfy together with humi to get off the couch and get the external drive with all the content from the other room.
 
 1. Audacity
-   ![](2022-02-28-19-14-20.png)
+   ![](Media/2022-02-28-19-14-20.png)
 2. ```
    audiowaveform -i .\a-little-fun.wav -o .\a-little-fun.png -z auto -w 1024
    ```
-   ![](2022-02-28-19-16-41-a-little-fun.png)
+   ![](Media/2022-02-28-19-16-41-a-little-fun.png)
 3. ```
    python -m http.server
    ```
 4. Magic
-   ![](2022-02-28-19-21-09.png) 
+   ![](Media/2022-02-28-19-21-09.png) 
 
 So, to see the uv results we can simply adjust our logging like so:
 
@@ -114,7 +114,7 @@ console.log(intersection.uv);
 
 And it works! However, there is one peculiar finding, can you spot it?
 
-![](2022-02-28-19-26-07.png) 
+![](Media/2022-02-28-19-26-07.png) 
 
 The `x` (u) coordinates seems to run backwards!
 
@@ -135,7 +135,7 @@ const { x } = intersection.uv
 const targetTime = (1-x) * audioEl.duration
 ```
 
-![](2022-02-28-19-39-45.png)
+![](Media/2022-02-28-19-39-45.png)
 
 Yup.
 
@@ -207,15 +207,15 @@ Ok, not quite, maybe we should be rotating the opposite direction and fix up the
 
 Closer, but no cigar.
 
-![](2022-02-28-20-18-33.png)
+![](Media/2022-02-28-20-18-33.png)
 
 YES FFS...
 
-![](2022-02-28-20-24-12.png)
+![](Media/2022-02-28-20-24-12.png)
 
 Alright, now that we infinite energy, let's tune it out. With the help of Mr. Inspector! (`Ctrl+Alt+I`)
 
-![](2022-02-28-20-25-48.png)
+![](Media/2022-02-28-20-25-48.png)
 
 ![[Hello, World! - Google Chrome 2022-02-28 20-26-48.mp4]]
 
@@ -223,11 +223,11 @@ Oh it actually already matches up. Did it just need a refresh? Still, the 0 is o
 
 Let's refresh and find the correct starting rotation for the curvedimage using the Inspector again.
 
-![](2022-02-28-20-29-28.png)
+![](Media/2022-02-28-20-29-28.png)
 
 These are our starting positions. I would have expected a straight 90 degree difference, but this seems slightly more, curious!
 
-![](2022-02-28-20-30-17.png)
+![](Media/2022-02-28-20-30-17.png)
 
 Where is this 100 degree rotation coming from?!
 
@@ -242,7 +242,7 @@ Where is this 100 degree rotation coming from?!
 
 Ehm. I was sure I checked there already, well let's get rid of that silly line.
 
-![](2022-02-28-20-32-22.png)
+![](Media/2022-02-28-20-32-22.png)
 
 Badum, tss! Perfect match!
 
